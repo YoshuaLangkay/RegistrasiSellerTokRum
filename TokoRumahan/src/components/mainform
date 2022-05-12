@@ -1,0 +1,522 @@
+import React from "react"
+import { Nav } from "react-bootstrap";
+import { Prev } from "react-bootstrap/esm/PageItem";
+
+const MainForm =() =>{
+  const [formStep, setFormStep] = React.useState(0)
+  
+  const completeFormStep =() => {
+    setFormStep(cur => cur + 1)
+  }
+
+  const notcompleteFormStep =() => {
+    setFormStep(cur => cur - 1)
+  }
+    return(
+      
+<div className="form-utama" style={{backgroundColor:"#e6e6e6"}}>
+<img className="banner" src="image/slideart1.jpg" style={{width:"100%"}}/>
+  <br/>
+  <h2 className="text-center mt-5" style={{color:"#f16e60"}}>Daftarkan Toko Anda</h2>
+  <h4 className="text-center" style={{color:"#253863"}}>Pastikan penjual adalah produsen</h4>
+  <h5 className="text-center mb-5" style={{color:"#253863"}}>Pilih jenis usaha Anda</h5>
+  
+<div className="container mb-5">
+<Nav variant="pills" defaultActiveKey="#" style={{}}>
+</Nav>
+</div>
+
+<div className="form-user shadow p-3 mb-5 bg-body rounded container">
+<form>
+
+
+{formStep === 0 && (
+<section>
+
+<div className="all-steps d-flex">
+<div className="step-1">
+<div className="container d-flex">
+<h5 className="rounded bg-primary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>1</h5>
+  <h5 className="ms-3 text-primary">Identitas Pemilik</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex" style={{marginTop:"-25px"}}>Masukan identitas pemilik usaha</p>
+</div>
+
+<h5 className="ms-5 mt-2 me-5"> > </h5>
+
+<div className="step-2">
+<div className="container d-flex">
+<h5 className="rounded bg-secondary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>2</h5>
+  <h5 className="ms-3 text-secondary">Identitas Usaha</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex" style={{marginTop:"-25px"}}>Masukan identitas usaha yang dimiliki</p>
+</div>
+
+<h5 className="ms-5 mt-2 me-5"> > </h5>
+
+</div>
+
+<div className="all-steps d-flex">
+  
+<div className="step-3 ms-5">
+<div className="container d-flex">
+<h5 className="rounded bg-secondary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>3</h5>
+  <h5 className="ms-3 text-secondary">Legalitas & Izin Usaha</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex" style={{marginTop:"-25px"}}>Masukan legalitas dan izin usaha</p>
+</div>
+
+<h5 className="ms-5 mt-2 me-5"> > </h5>
+
+<div className="step-4 ms-5">
+<div className="container d-flex">
+<h5 className="rounded bg-secondary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>4</h5>
+  <h5 className="ms-3 text-secondary">Brand</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex mb-" style={{marginTop:"-25px"}}>Masukan nama brand</p>
+</div>
+
+</div>
+
+<hr className="mb-4"/>
+
+
+<div class="form-row d-flex justify-content-center">
+		<div class="form-group col-md-5 me-5">
+			<label for="contoh1">Nama Depan</label>
+      <sup className="required" style={{color:"red"}}>*</sup>
+			<input type="text" class="form-control" id="validationDefault01" placeholder="Nama Depan" required/>
+		</div>
+		<div class="form-group col-md-5 mb-4">
+			<label for="contoh2">Nama Belakang</label>
+      <sup className="required" style={{color:"red"}}>*</sup>
+			<input type="text" class="form-control" id="contoh2" placeholder="Nama Belakang" required/>
+		</div>
+	</div>
+
+  <div class="form-row d-flex justify-content-center">
+		<div class="form-group col-md-5 me-5">
+			<label for="contoh1">Tempat dan Tanggal Lahir</label>
+      <sup className="required" style={{color:"red"}}>*</sup>
+			<input type="text" class="form-control" id="contoh3" placeholder="Tempat Lahir" required/>
+		</div>
+		<div class="form-group col-md-5 mb-4">
+			<label for="contoh2"></label>
+			<input type="date" class="form-control" id="contoh4" required/>
+		</div>
+	</div>
+
+  <div class="form-row d-flex">
+		<div class="form-group col-md-6 me-3 ms-5 ps-4">
+  <label class="form-check-label" for="flexRadioDefault1">Jenis Kelamin</label>
+  <sup className="required" style={{color:"red"}}>*</sup>
+  <div className="radiobox d-flex">
+  <div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required/>
+  <label class="form-check-label" for="flexRadioDefault1">
+    Laki - laki
+  </label>
+</div>
+    
+<div class="form-check ms-3 mb-4">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" required/>
+  <label class="form-check-label" for="flexRadioDefault2">
+    Perempuan
+  </label>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="form-row d-flex justify-content-center">
+		<div class="form-group col-md-5 me-5">
+			<label for="contoh1">Nomor Telepon </label>
+      <sup className="required" style={{color:"red"}}>*</sup>
+			<input type="number" class="form-control" id="contoh5" placeholder="No Telepon" required/>
+		</div>
+		<div class="form-group col-md-5 mb-4">
+			<label for="contoh2">Email</label>
+      <sup className="required" style={{color:"red"}}>*</sup>
+			<input type="Email" class="form-control" id="contoh6" placeholder="Email" required/>
+		</div>
+	</div>
+
+  <div class="form-row d-flex">
+		<div class="form-group col-md-4 me-3 ms-5 ps-3">
+			<label for="contoh1">Provinsi </label>
+      <sup className="required" style={{color:"red"}}>*</sup>
+			<select class="form-select">
+  <option selected>Pilih Provinsi</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+		</div>
+    <div class="form-group col-md-3 me-3 ms-3">
+			<label for="contoh1">Kota </label>
+      <sup className="required" style={{color:"red"}}>*</sup>
+			<select class="form-select">
+  <option selected>Pilih Kota</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+		</div>
+    <div class="form-group col-md-3 me-3 mb-4 ms-3">
+			<label for="contoh1">Kecamatan </label>
+      <sup className="required" style={{color:"red"}}>*</sup>
+			<select class="form-select">
+  <option selected>Pilih Kecamatan</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+		</div>
+	</div>
+
+  <div class="form-row d-flex justify-content-center">
+		<div class="form-group col-md-5 me-5">
+			<label for="contoh1">Kode POS </label>
+      <sup className="required" style={{color:"red"}}>*</sup>
+			<input type="number" class="form-control" id="contoh5" placeholder="Kode Pos" required/>
+		</div>
+		<div class="form-group col-md-5 mb-4">
+			<label for="contoh2">Alamat Lengkap</label>
+      <sup className="required" style={{color:"red"}}>*</sup>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Alamat Lengkap" required></textarea>
+		</div>
+	</div>
+
+  <div class="form-row d-flex">
+		<div class="form-group col-md-11 me-2 ms-5 ps-3 pe-3 mb-4">
+			<label for="contoh1">Nomor KTP </label>
+      <sup className="required" style={{color:"red"}}>*</sup>
+			<input type="number" class="form-control" id="contoh5" placeholder="Nomor KTP" required/>
+		</div>
+    </div>
+  <div class="col-12 mt-4 d-flex justify-content-end pe-5">
+    <button
+    onClick={completeFormStep} class="btn btn-primary" style={{width: "15%"}} type="button">Lanjut</button>
+  </div>
+</section>
+)}
+
+
+{formStep === 1 && (
+<section>
+
+<div className="all-steps d-flex">
+<div className="step-1">
+<div className="container d-flex">
+<h5 className="rounded bg-secondary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>1</h5>
+  <h5 className="ms-3 text-secondary">Identitas Pemilik</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex" style={{marginTop:"-25px"}}>Masukan identitas pemilik usaha</p>
+</div>
+
+<h5 className="ms-5 mt-2 me-5"> > </h5>
+
+<div className="step-2">
+<div className="container d-flex">
+<h5 className="rounded  bg-primary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>2</h5>
+  <h5 className="ms-3 text-primary">Identitas Usaha</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex" style={{marginTop:"-25px"}}>Masukan identitas usaha yang dimiliki</p>
+</div>
+
+<h5 className="ms-5 mt-2 me-5"> > </h5>
+
+</div>
+
+<div className="all-steps d-flex">
+  
+<div className="step-3 ms-5">
+<div className="container d-flex">
+<h5 className="rounded bg-secondary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>3</h5>
+  <h5 className="ms-3 text-secondary">Legalitas & Izin Usaha</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex" style={{marginTop:"-25px"}}>Masukan legalitas dan izin usaha</p>
+</div>
+
+<h5 className="ms-5 mt-2 me-5"> > </h5>
+
+<div className="step-4 ms-5">
+<div className="container d-flex">
+<h5 className="rounded bg-secondary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>4</h5>
+  <h5 className="ms-3 text-secondary">Brand</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex mb-" style={{marginTop:"-25px"}}>Masukan nama brand</p>
+</div>
+
+</div>
+
+<hr className="mb-4"/>
+
+  <div class="container col-md-11 me-2 ms-5 ps-3 pe-3 mt-4">
+            <div class="">
+                <label for="Image" class="form-label">Upload Foto Tempat Usaha<sup className="wajib" style={{color:"red"}}>*</sup></label>
+                <input class="form-control" type="file" id="formFile" onchange="preview()" required/>
+            </div>
+            <img id="frame" src="" class="img-fluid" />
+        </div>
+
+        <div class="form-row d-flex">
+		<div class="form-group col-md-6 me-3 ms-5 ps-4">
+  <label class="form-check-label" for="flexRadioDefault1">Media Sosial / Website Toko</label>
+  <sup className="required" style={{color:"red"}}>*</sup>
+  <div className="radiobox d-flex">
+  <div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required/>
+  <label class="form-check-label" for="flexRadioDefault1">
+    Instagram
+  </label>
+</div>
+    
+<div class="form-check ms-5 mb-4">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" required/>
+  <label class="form-check-label" for="flexRadioDefault2">
+    Twitter
+  </label>
+  </div>
+
+  <div class="form-check ms-5 mb-4">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" required/>
+  <label class="form-check-label" for="flexRadioDefault2">
+    Facebook
+  </label>
+  </div>
+
+  <div class="form-check ms-4 mb-4">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" required/>
+  <label class="form-check-label" for="flexRadioDefault2">
+    Website Pribadi
+  </label>
+  </div>
+  </div>
+</div>
+</div>
+
+  <div class="form-row d-flex">
+		<div class="form-group col-md-11 me-2 ms-5 ps-3 pe-3 mb-4">
+			<label for="contoh1">URL </label>
+      <sup className="required" style={{color:"red"}}>*</sup>
+			<input type="url" class="form-control" id="contoh5" placeholder="URL" required/>
+		</div>
+    </div>
+
+    <div class="form-group col-md-11 me-2 ms-5 pe-3 ps-3 mb-4">
+			<label for="contoh1">Kategori Usaha</label>
+      <sup className="required" style={{color:"red"}}>*</sup>
+			<select class="form-select">
+  <option selected>Pilih Kategori</option>
+  <option value="1">Makanan dan Minuman</option>
+  <option value="2">Fashion</option>
+  <option value="3">Kerajinan</option>
+</select>
+		</div>
+
+		<div class="form-group col-md-6 me-3 ms-5 ps-4">
+  <label class="form-check-label" for="flexRadioDefault1">Kepelimikan Usaha</label>
+  <sup className="required" style={{color:"red"}}>*</sup>
+  <div className="radiobox d-flex">
+  <div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+  <label class="form-check-label" for="flexRadioDefault1">
+    Milik Pribadi
+  </label>
+</div>
+<div class="form-check ms-5 mb-4">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
+  <label class="form-check-label" for="flexRadioDefault2">
+    Badan Usaha
+  </label>
+  </div>
+</div>
+</div>
+<div className="d-flex mt-4">
+<div class="col-4 d-flex justify-content-start ms-5 ps-3">
+    <button onClick={notcompleteFormStep} class="btn btn-primary" style={{width: "30%"}} type="button">Kembali</button>
+  </div>
+
+<div class="col-7 d-flex justify-content-end ms-1 ps-1 pe-3" style={{left:"30px"}}>
+    <button onClick={completeFormStep} class="btn btn-primary" style={{width: "20%"}} type="button">Lanjut</button>
+  </div>
+</div>
+</section>
+)}
+
+
+
+{formStep === 2 && (
+<section>
+
+<div className="all-steps d-flex">
+<div className="step-1">
+<div className="container d-flex">
+<h5 className="rounded  bg-secondary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>1</h5>
+  <h5 className="ms-3 text-secondary">Identitas Pemilik</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex" style={{marginTop:"-25px"}}>Masukan identitas pemilik usaha</p>
+</div>
+
+<h5 className="ms-5 mt-2 me-5"> > </h5>
+
+<div className="step-2">
+<div className="container d-flex">
+<h5 className="rounded bg-secondary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>2</h5>
+  <h5 className="ms-3 text-secondary">Identitas Usaha</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex" style={{marginTop:"-25px"}}>Masukan identitas usaha yang dimiliki</p>
+</div>
+
+<h5 className="ms-5 mt-2 me-5"> > </h5>
+
+</div>
+
+<div className="all-steps d-flex">
+  
+<div className="step-3 ms-5">
+<div className="container d-flex">
+<h5 className="rounded  bg-primary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>3</h5>
+  <h5 className="ms-3 text-primary">Legalitas & Izin Usaha</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex" style={{marginTop:"-25px"}}>Masukan legalitas dan izin usaha</p>
+</div>
+
+<h5 className="ms-5 mt-2 me-5"> > </h5>
+
+<div className="step-4 ms-5">
+<div className="container d-flex">
+<h5 className="rounded bg-secondary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>4</h5>
+  <h5 className="ms-3 text-secondary">Brand</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex mb-" style={{marginTop:"-25px"}}>Masukan nama brand</p>
+</div>
+
+</div>
+
+<hr className="mb-4"/>
+
+  <div class="form-row d-flex mt-4">
+		<div class="form-group col-md-11 me-2 ms-5 ps-3 pe-3 mb-4">
+			<label for="contoh1">NPWP (Opsional)</label>
+			<input type="Number" class="form-control" id="contoh5" placeholder="NPWP" required/>
+		</div>
+    </div>
+
+    <div class="container col-md-11 me-2 ms-5 ps-3 pe-3">
+                <label for="Image" class="form-label">Upload Sertifikat Halal (Opsional)</label>
+                <input class="form-control" type="file" id="formFile" onchange="preview()"/>
+            <img id="frame" src="" class="img-fluid" />
+        </div>
+        <div class="container col-md-11 me-2 ms-5 ps-3 pe-3">
+            <div class="mb-4">
+                <label for="Image" class="form-label">Upload NIB (Opsional)</label>
+                <input class="form-control" type="file" id="formFile" onchange="preview()"/>
+            </div>
+            <img id="frame" src="" class="img-fluid" />
+        </div>
+        <div className="d-flex">
+<div class="col-4 d-flex justify-content-start ms-5 ps-3">
+    <button onClick={notcompleteFormStep} class="btn btn-primary" style={{width: "30%"}} type="button">Kembali</button>
+  </div>
+
+<div class="col-7 d-flex justify-content-end ms-1 ps-1 pe-3" style={{left:"30px"}}>
+    <button onClick={completeFormStep} class="btn btn-primary" style={{width: "20%"}} type="button">Lanjut</button>
+  </div>
+</div>  
+</section>
+)}
+
+{formStep === 3 && (
+<section>
+
+<div className="all-steps d-flex">
+<div className="step-1">
+<div className="container d-flex">
+<h5 className="rounded  bg-secondary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>1</h5>
+  <h5 className="ms-3 text-secondary">Identitas Pemilik</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex" style={{marginTop:"-25px"}}>Masukan identitas pemilik usaha</p>
+</div>
+
+<h5 className="ms-5 mt-2 me-5"> > </h5>
+
+<div className="step-2">
+<div className="container d-flex">
+<h5 className="rounded bg-secondary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>2</h5>
+  <h5 className="ms-3 text-secondary">Identitas Usaha</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex" style={{marginTop:"-25px"}}>Masukan identitas usaha yang dimiliki</p>
+</div>
+
+<h5 className="ms-5 mt-2 me-5"> > </h5>
+
+</div>
+
+<div className="all-steps d-flex">
+  
+<div className="step-3 ms-5">
+<div className="container d-flex">
+<h5 className="rounded bg-secondary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>3</h5>
+  <h5 className="ms-3 text-secondary">Legalitas & Izin Usaha</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex" style={{marginTop:"-25px"}}>Masukan legalitas dan izin usaha</p>
+</div>
+
+<h5 className="ms-5 mt-2 me-5"> > </h5>
+
+<div className="step-4 ms-5">
+<div className="container d-flex">
+<h5 className="rounded  bg-primary pt-1 ps-3 text-light shadow" style={{width:"40px", height:"40px"}}>4</h5>
+  <h5 className="ms-3 text-primary">Brand</h5>
+</div>
+  <p class="text-black-50 ms-5 ps-3 d-flex mb-" style={{marginTop:"-25px"}}>Masukan nama brand</p>
+</div>
+
+</div>
+
+<hr className="mb-4"/>
+
+<div class="form-row d-flex">
+		<div class="form-group col-md-11 me-2 ms-5 ps-3 pe-3 ">
+			<label for="contoh1">Nama Brand</label>
+      <sup className="required" style={{color:"red"}}>*</sup>
+			<input type="text" class="form-control" id="contoh5" placeholder="" required/>
+		</div>
+    </div>
+
+<div class="form-row d-flex">
+		<div class="form-group col-md-11 me-2 ms-5 ps-3 pe-3 mt-4">
+			<label for="contoh1">No Sertifikat HAKI (Opsional)</label>
+			<input type="text" class="form-control" id="contoh5" placeholder=""/>
+		</div>
+    </div>
+
+    <div class="container col-md-11 me-2 ms-5 ps-3 pe-3 mt-4">
+            <div class="mb-4">
+                <label for="Image" class="form-label">Upload Sertifikat HAKI (Opsional)</label>
+                <input class="form-control" type="file" id="formFile" onchange="preview()"/>
+            </div>
+            <img id="frame" src="" class="img-fluid" />
+        </div>
+
+        <div className="d-flex">
+<div class="col-4 d-flex justify-content-start ms-5 ps-3">
+    <button onClick={notcompleteFormStep} class="btn btn-primary" style={{width: "30%"}} type="button">Kembali</button>
+  </div>
+
+<div class="col-7 d-flex justify-content-end ms-1 ps-1 pe-3" style={{left:"30px"}}>
+    <button class="btn btn-primary" style={{width: "20%"}} type="Submit">Kirim</button>
+  </div>
+</div> 
+</section>
+)}
+
+
+</form>
+</div>
+</div>
+    );
+}
+export default MainForm;

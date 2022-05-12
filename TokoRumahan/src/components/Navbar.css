@@ -1,0 +1,23 @@
+.logobranding{
+    width: 200px;
+}
+.naiv{
+    float: right;
+    color: #B7B7B7 !important;
+}
+.navs{
+    background-color: #FFFFFF !important;
+    height: 80px;
+}
+.fontt{
+    color: #B7B7B7 !important;
+}
+.txt{
+    /* font-family: 'Nunito', sans-serif; */
+    font-family: nunito;
+    font-size: 16px;
+}
+@font-face{
+    font-family: nunito;
+    src:url('Nunito-VariableFont_wght.ttf');
+  }
